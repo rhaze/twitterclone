@@ -1,0 +1,9 @@
+<h2>Enter a Tweet:</h2>
+
+<% if current_user %>
+	<%= simple_form_for @tweet do |f| %>
+		<%= f.input :body %>
+	<br>
+		<%= f.submit "Post Tweet!", class: 'btn btn-primary' %>
+	<% end %>
+<% end %>
