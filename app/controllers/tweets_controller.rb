@@ -12,7 +12,7 @@ class TweetsController < ApplicationController
 		@tweet = Tweet.new(tweet_params)
     @tweet.user_id = current_user.id
     @tweet.save!
-    flash.alert[:info] = "Added a new tweet!"
+    flash[:info] = "Added a new tweet!"
     redirect_to tweet_path(:id)
 	end
 
