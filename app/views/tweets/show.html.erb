@@ -1,5 +1,8 @@
 <h2><%= current_user.first_name %>'s Tweets</h2>
 
-<%= @tweets.each do |tweet| %>
-	<%= tweet.body %>
-<% end %>
+
+<ul>
+	<% current_user.tweets.each do |tweet| %>
+		<li><%= tweet.body %></li>
+	<% end %>
+</ul>
